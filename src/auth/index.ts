@@ -38,7 +38,7 @@ export const auth = new Elysia({ name: "auth" })
   .macro("itOnly", {
     auth: true,
     resolve({ status, user }) {
-      if (user.role !== "it") {
+      if (user.department !== "it") {
         return status("Forbidden");
       }
       return {};

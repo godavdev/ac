@@ -1,10 +1,12 @@
 import { Elysia } from "elysia";
 import { cors } from "@elysiajs/cors";
 import { auth } from "./auth";
+import { docs } from "./docs";
 const app = new Elysia()
   .use(cors())
   .use(auth)
   .get("/", () => "Resultado público")
+  .use(docs)
   .get(
     "/authenticated",
     ({ user }) => {

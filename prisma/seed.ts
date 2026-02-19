@@ -75,7 +75,7 @@ const main = async () => {
   console.log("Admin User API Key:", adminApiKey.key);
   console.log("IT User API Key:", itApiKey.key);
   console.log("Sales User API Key:", salesApiKey.key);
-  console.log("Document created with ID:", document.id);
+  // console.log("Document created with ID:", document.id);
 };
 
 main()
